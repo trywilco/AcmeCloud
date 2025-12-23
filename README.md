@@ -28,15 +28,17 @@ The system retrieves relevant information from our internal knowledge base (FAQs
 1. Open this repository in GitHub Codespaces (recommended) or clone locally
 
 2. Install dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 3. Set your OpenAI API key (choose one method):
+
    ```bash
    # Option A: Environment variable
    export OPENAI_API_KEY="your-api-key-here"
-   
+
    # Option B: Create a .env or .env.local file
    echo 'OPENAI_API_KEY=your-api-key-here' > .env.local
    ```
@@ -69,14 +71,17 @@ The system retrieves relevant information from our internal knowledge base (FAQs
 The following modules contain `TODO` markers indicating where implementation is needed:
 
 ### 1. Embeddings (`src/embeddings.py`)
+
 - `embed_texts()`: Convert text strings to vector embeddings
 - `embed_documents()`: Embed all documents in the knowledge base
 
 ### 2. Retrieval (`src/retrieval.py`)
+
 - `cosine_similarity()`: Compute similarity between query and documents
 - `retrieve()`: Find and return the most relevant documents
 
 ### 3. RAG Pipeline (`src/rag_pipeline.py`)
+
 - `build_context()`: Format retrieved documents into context
 - `build_prompt()`: Create the LLM prompt with context and question
 - `answer_question()`: Orchestrate the full RAG pipeline
@@ -85,13 +90,13 @@ The following modules contain `TODO` markers indicating where implementation is 
 
 Edit `src/config.py` to adjust:
 
-| Setting | Default | Description |
-|---------|---------|-------------|
-| `embedding_model` | `text-embedding-3-small` | OpenAI embedding model |
-| `llm_model` | `gpt-4o-mini` | LLM for response generation |
-| `top_k` | `3` | Number of documents to retrieve |
-| `retrieval_strategy` | `cosine` | Similarity metric |
-| `max_context_length` | `4000` | Maximum context characters |
+| Setting              | Default                  | Description                     |
+| -------------------- | ------------------------ | ------------------------------- |
+| `embedding_model`    | `text-embedding-3-small` | OpenAI embedding model          |
+| `llm_model`          | `gpt-4o-mini`            | LLM for response generation     |
+| `top_k`              | `3`                      | Number of documents to retrieve |
+| `retrieval_strategy` | `cosine`                 | Similarity metric               |
+| `max_context_length` | `4000`                   | Maximum context characters      |
 
 ## Evaluation
 
@@ -105,10 +110,10 @@ Reference answers are provided for qualitative comparison.
 
 ## Data Sources
 
-| Source | Count | Description |
-|--------|-------|-------------|
-| FAQ | 10 | Public customer-facing answers |
-| Escalation Notes | 10 | Internal support procedures |
+| Source           | Count | Description                    |
+| ---------------- | ----- | ------------------------------ |
+| FAQ              | 10    | Public customer-facing answers |
+| Escalation Notes | 10    | Internal support procedures    |
 
 ## Next Steps
 
@@ -121,5 +126,4 @@ After implementing the core components:
 
 ---
 
-*AcmeCloud Engineering | Internal Use Only*
-
+_AcmeCloud Engineering | Internal Use Only_
