@@ -30,9 +30,13 @@ The system retrieves relevant information from our internal knowledge base (FAQs
    pip install -r requirements.txt
    ```
 
-3. Set your OpenAI API key:
+3. Set your OpenAI API key (choose one method):
    ```bash
+   # Option A: Environment variable
    export OPENAI_API_KEY="your-api-key-here"
+   
+   # Option B: Create a .env or .env.local file
+   echo 'OPENAI_API_KEY=your-api-key-here' > .env.local
    ```
 
 4. Run the evaluation:
