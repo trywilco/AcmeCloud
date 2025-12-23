@@ -16,6 +16,8 @@ The system retrieves relevant information from our internal knowledge base (FAQs
 
 ## Quick Start
 
+> ⚠️ **Note**: This project contains `TODO` stubs that must be implemented before it will run. See [Implementation Tasks](#implementation-tasks) below.
+
 ### Prerequisites
 
 - Python 3.11+
